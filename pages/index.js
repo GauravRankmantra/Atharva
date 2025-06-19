@@ -527,7 +527,6 @@ const Home = () => {
           }}
         />
 
-        {/* Content Wrapper with position relative to come above overlay */}
         <div className="container-width section-padding relative z-10">
           <motion.div
             initial={{ y: 50, opacity: 0 }}
