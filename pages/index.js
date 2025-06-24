@@ -30,15 +30,26 @@ import img2 from "../public/images/home/2.jpg";
 import img3 from "../public/images/home/3.jpg";
 import img4 from "../public/images/home/4.jpg";
 import Image from "next/image";
-import { FlipWords } from "@/components/ui/flip-words";
+import { FlipWords } from "../components/ui/flip-words";
 import bg1 from "../public/images/home/bg1.jpg";
 import bg2 from "../public/images/home/bg2.jpg";
 import bg3 from "../public/images/home/bg3.jpg";
 import backgroundImage from "../public/images/home/sitebg.png";
 import backgroundImage2 from "../public/images/home/sitebg4.jpg";
 import backgroundImage3 from "../public/images/home/sitebg6.webp";
+import { ParallaxScroll } from "../components/ui/parallax-scroll";
+import { HeroParallax } from "@/components/ui/hero-parallax";
+import MediaScroller from "@/components/ui/MediaScroller";
 
 const Home = () => {
+  const imagesp = [
+    "https://images.unsplash.com/photo-1743601567013-b72682fdc511?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8",
+    "https://plus.unsplash.com/premium_photo-1750063400799-d3d386a86c36?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxfHx8ZW58MHx8fHx8",
+    "https://images.unsplash.com/photo-1747134392051-5e112c58ce1e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0fHx8ZW58MHx8fHx8",
+    "https://unsplash.com/photos/the-image-depicts-the-head-of-a-macaw-5NqwmKjx6jo",
+    "https://images.unsplash.com/photo-1747134392756-96ac368ad361?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1749748823807-4bea5d0807a4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxNnx8fGVufDB8fHx8fA%3D%3D",
+  ];
   const [bookingModal, setBookingModal] = useState({
     isOpen: false,
     title: "",
@@ -183,6 +194,56 @@ const Home = () => {
     { number: "15+", label: "Spa Treatments" },
     { number: "100%", label: "Guest Satisfaction" },
     { number: "24/7", label: "Concierge Service" },
+  ];
+  const sampleMedia = [
+    {
+      type: "image",
+      url: "https://res.cloudinary.com/dmcgea4q8/image/upload/v1750758022/WhatsApp_Image_2025-06-23_at_4.28.29_PM_qxsw5j.jpg",
+    },
+    {
+      type: "video",
+      url: "https://res.cloudinary.com/dmcgea4q8/video/upload/v1750757646/knbunzpzluwprky1thcz.mp4",
+    },
+    {
+      type: "image",
+      url: "https://res.cloudinary.com/dmcgea4q8/image/upload/v1750758022/WhatsApp_Image_2025-06-23_at_4.28.31_PM_1_lvsjza.jpg",
+    },
+    {
+      type: "image",
+      url: "https://res.cloudinary.com/dmcgea4q8/image/upload/v1750758022/WhatsApp_Image_2025-06-23_at_4.28.30_PM_pn5hl8.jpg",
+    },
+    {
+      type: "image",
+      url: "https://res.cloudinary.com/dmcgea4q8/image/upload/v1750758021/WhatsApp_Image_2025-06-23_at_4.28.31_PM_3_mdgji8.jpg",
+    },
+    {
+      type: "image",
+      url: "https://res.cloudinary.com/dmcgea4q8/image/upload/v1750758021/WhatsApp_Image_2025-06-23_at_4.28.31_PM_2_rm8pgf.jpg",
+    },
+    {
+      type: "image",
+      url: "https://res.cloudinary.com/dmcgea4q8/image/upload/v1750758021/WhatsApp_Image_2025-06-23_at_4.28.30_PM_1_rhtqmn.jpg",
+    },
+    {
+      type: "image",
+      url: "https://res.cloudinary.com/dmcgea4q8/image/upload/v1750758021/WhatsApp_Image_2025-06-23_at_4.28.31_PM_2_rm8pgf.jpg",
+    },
+    {
+      type: "image",
+      url: "https://res.cloudinary.com/dmcgea4q8/image/upload/v1750758022/WhatsApp_Image_2025-06-23_at_4.28.29_PM_qxsw5j.jpg",
+    },
+    {
+      type: "video",
+      url: "https://res.cloudinary.com/dmcgea4q8/video/upload/v1750757646/knbunzpzluwprky1thcz.mp4",
+    },
+    {
+      type: "image",
+      url: "https://res.cloudinary.com/dmcgea4q8/image/upload/v1750758022/WhatsApp_Image_2025-06-23_at_4.28.31_PM_1_lvsjza.jpg",
+    },
+    {
+      type: "image",
+      url: "https://res.cloudinary.com/dmcgea4q8/image/upload/v1750758022/WhatsApp_Image_2025-06-23_at_4.28.30_PM_pn5hl8.jpg",
+    },
   ];
 
   // Auto-rotate testimonials
@@ -868,6 +929,10 @@ const Home = () => {
             </div>
           </div>
         </div>
+      </section>
+      <section>
+        <h1 className="text-2xl text-center font-bold mb-4">Media Gallery</h1>
+        <MediaScroller media={sampleMedia} />
       </section>
 
       {/* Contact Preview Section */}

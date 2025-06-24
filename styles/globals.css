@@ -136,3 +136,12 @@
 .particle:nth-child(7) { left: 70%; animation-delay: 12s; }
 .particle:nth-child(8) { left: 80%; animation-delay: 14s; }
 .particle:nth-child(9) { left: 90%; animation-delay: 16s; }
+
+/* styles/globals.css or equivalent */
+.swiper {
+  padding-bottom: 10px;
+}
+
+.swiper-slide {
+  transition: transform 0.3s ease-in-out;
+}
