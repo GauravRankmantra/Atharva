@@ -35,11 +35,12 @@ import bg1 from "../public/images/home/bg1.jpg";
 import bg2 from "../public/images/home/bg2.jpg";
 import bg3 from "../public/images/home/bg3.jpg";
 import backgroundImage from "../public/images/home/sitebg.png";
-import backgroundImage2 from "../public/images/home/sitebg4.jpg";
+import backgroundImage2 from "../public/images/bg2.jpeg";
 import backgroundImage3 from "../public/images/home/sitebg6.webp";
 import { ParallaxScroll } from "../components/ui/parallax-scroll";
 import { HeroParallax } from "@/components/ui/hero-parallax";
 import MediaScroller from "@/components/ui/MediaScroller";
+
 
 const Home = () => {
   const imagesp = [
@@ -126,8 +127,7 @@ const Home = () => {
       subtitle: "Mountain View Luxury",
       description:
         "Sophisticated comfort with panoramic mountain vistas and premium amenities",
-      image:
-        "https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?w=500&h=400&fit=crop",
+      image:"/images/room1.jpeg",
       price: "₹3000",
       features: [
         "King Size Bed",
@@ -157,7 +157,7 @@ const Home = () => {
       description:
         "Expansive suites with 360° views and dedicated concierge service",
       image:
-        "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?w=500&h=400&fit=crop",
+        "/images/suiet.jpeg",
       price: "₹6000",
       features: [
         "360° Views",
@@ -244,6 +244,22 @@ const Home = () => {
       type: "image",
       url: "https://res.cloudinary.com/dmcgea4q8/image/upload/v1750758022/WhatsApp_Image_2025-06-23_at_4.28.30_PM_pn5hl8.jpg",
     },
+    {
+      type: "image",
+      url: "/images/1.jpeg",
+    },
+    {
+      type: "image",
+          url: "/images/2.jpeg",
+    },
+    {
+      type: "image",
+           url: "/images/3.jpeg",
+    },
+     {
+      type: "image",
+           url: "/images/4.jpeg",
+    },
   ];
 
   // Auto-rotate testimonials
@@ -301,7 +317,7 @@ const Home = () => {
               className="absolute inset-0 w-full h-full"
             />
           ))}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/50 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-transparent" />
         </div>
 
         {/* Floating Particles */}
@@ -799,7 +815,7 @@ const Home = () => {
         style={{
           backgroundImage: `url(${backgroundImage2.src})`,
           backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundPosition: "top",
           backgroundAttachment: "fixed",
         }}
         className="py-16 sm:py-20 lg:py-32 overflow-hidden relative"

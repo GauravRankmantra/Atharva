@@ -70,8 +70,8 @@ const Rooms = () => {
         { icon: Heart, text: 'Concierge service' }
       ],
       images: [
-        'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?w=800&h=600&fit=crop',
-        'https://images.pexels.com/photos/775219/pexels-photo-775219.jpeg?w=800&h=600&fit=crop',
+        '/images/room1.jpeg',
+        '/images/4.jpeg',
         'https://images.pexels.com/photos/1454806/pexels-photo-1454806.jpeg?w=800&h=600&fit=crop'
       ],
       price: '5999',

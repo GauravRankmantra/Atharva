@@ -56,7 +56,8 @@ const Footer = () => {
                 transition={{ duration: 0.5 }}
                 className="text-primary-400"
               >
-                <Sparkles size={32} />
+              <img className="w-24 h-24" src="/images/logo.png">
+              </img>
               </motion.div>
               <div>
                 <h1 className="text-2xl font-playfair font-bold">
