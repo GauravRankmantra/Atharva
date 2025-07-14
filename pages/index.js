@@ -34,6 +34,9 @@ import { FlipWords } from "../components/ui/flip-words";
 import bg1 from "../public/images/home/bg1.jpg";
 import bg2 from "../public/images/home/bg2.jpg";
 import bg3 from "../public/images/home/bg3.jpg";
+import bg4 from "../public/images/bg2.jpeg";
+import bg5 from "../public/images/bg3.jpeg";
+import bg6 from "../public/images/bg4.jpeg";
 import backgroundImage from "../public/images/home/sitebg.png";
 import backgroundImage2 from "../public/images/bg2.jpeg";
 import backgroundImage3 from "../public/images/home/sitebg6.webp";
@@ -272,7 +275,7 @@ const Home = () => {
 
   /// --- Home Page Hero Section Condition --- ///
 
-  const images = [bg1, bg2, bg3];
+  const images = [bg1,bg4, bg2, bg3,bg5,bg6];
 
   const [currentImage, setCurrentImage] = useState(0);
 
