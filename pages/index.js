@@ -4,17 +4,16 @@ import { useState, useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { Users, Car, Coffee, Bath, Bed, Mountain, Heart } from "lucide-react";
 import {
   ArrowRight,
   Star,
   Wifi,
-  Car,
   Utensils,
   Dumbbell,
   Waves,
   TreePine,
   Award,
-  Users,
   Calendar,
   MapPin,
   Phone,
@@ -43,7 +42,6 @@ import backgroundImage3 from "../public/images/home/sitebg6.webp";
 import { ParallaxScroll } from "../components/ui/parallax-scroll";
 import { HeroParallax } from "@/components/ui/hero-parallax";
 import MediaScroller from "@/components/ui/MediaScroller";
-
 
 const Home = () => {
   const imagesp = [
@@ -130,7 +128,7 @@ const Home = () => {
       subtitle: "Mountain View Luxury",
       description:
         "Sophisticated comfort with panoramic mountain vistas and premium amenities",
-      image:"/images/room1.jpeg",
+      image: "/images/room1.jpeg",
       price: "₹3000",
       features: [
         "King Size Bed",
@@ -159,8 +157,7 @@ const Home = () => {
       subtitle: "Ultimate Luxury",
       description:
         "Expansive suites with 360° views and dedicated concierge service",
-      image:
-        "/images/suiet.jpeg",
+      image: "/images/suiet.jpeg",
       price: "₹6000",
       features: [
         "360° Views",
@@ -168,6 +165,69 @@ const Home = () => {
         "Spa Bathroom",
         "Personal Concierge",
       ],
+    },
+  ];
+  const rooms = [
+    {
+      id: 1,
+      title: "Wooden Cottage",
+      category: "luxury",
+      description:
+        "Immerse yourself in nature with our handcrafted Wooden Cottages, offering a warm, rustic ambiance combined with modern luxury.",
+      features: [
+        "1100 Sq Ft Area",
+        "Private Pond Pool",
+        "Garden Access",
+        "Nature Lighting",
+        "Rain Dance Zone",
+        "Mango Orchard View",
+      ],
+      amenities: [
+        { icon: Users, text: "2 Adults + 2 Children (under 8)" },
+        { icon: Bed, text: "Luxury AC Bedroom" },
+        { icon: Bath, text: "Super Luxurious Bathroom Fittings" },
+        { icon: Coffee, text: "Tea & Coffee Machine" },
+        { icon: Wifi, text: "Surround Sound Music System" },
+        { icon: Mountain, text: "Jungle Safari Nearby" },
+      ],
+      images: [
+        "images/rooms/13.jpeg",
+        "images/rooms/14.jpeg",
+        "images/rooms/11.jpeg",
+        "images/rooms/12.jpeg",
+      ],
+      price: "19999",
+      priceNote: "per night (includes breakfast)",
+    },
+    {
+      id: 2,
+      title: "Fabricated RCC Cottage",
+      category: "premium",
+      description:
+        "Stay in our Fabricated RCC Cottages — thoughtfully constructed to blend strength with style. These cottages boast 1100 sq. ft. of spacious interiors with all modern conveniences",
+      features: [
+        "1100 Sq Ft RCC Build",
+        "Garden & Open Bar Access",
+        "Live Kitchen Nearby",
+        "Rain Dance & Sports Area",
+        "Luxury Bathroom",
+        "Private Deck",
+      ],
+      amenities: [
+        { icon: Users, text: "2 Adults + 2 Children (under 8)" },
+        { icon: Bed, text: "AC Room with Luxury Bed" },
+        { icon: Bath, text: "Premium Bathroom with Power Backup" },
+        { icon: Coffee, text: "Tea & Coffee Machines" },
+        { icon: Car, text: "Pick & Drop" },
+        { icon: Heart, text: "Horse Riding & Jungle Safari Access" },
+      ],
+      images: [
+        "images/rooms/21.jpeg",
+        "images/rooms/22.jpeg",
+        "images/rooms/23.jpeg",
+      ],
+      price: "19999",
+      priceNote: "per night (includes breakfast)",
     },
   ];
 
@@ -253,15 +313,15 @@ const Home = () => {
     },
     {
       type: "image",
-          url: "/images/2.jpeg",
+      url: "/images/2.jpeg",
     },
     {
       type: "image",
-           url: "/images/3.jpeg",
+      url: "/images/3.jpeg",
     },
-     {
+    {
       type: "image",
-           url: "/images/4.jpeg",
+      url: "/images/4.jpeg",
     },
   ];
 
@@ -275,7 +335,7 @@ const Home = () => {
 
   /// --- Home Page Hero Section Condition --- ///
 
-  const images = [bg1,bg4, bg2, bg3,bg5,bg6];
+  const images = [bg1, bg4, bg2, bg3, bg5, bg6];
 
   const [currentImage, setCurrentImage] = useState(0);
 
@@ -629,8 +689,8 @@ const Home = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
-            {roomHighlights.map((room, index) => (
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+            {rooms.map((room, index) => (
               <motion.div
                 key={room.title}
                 initial={{ y: 50, opacity: 0 }}
@@ -641,7 +701,7 @@ const Home = () => {
               >
                 <div className="relative h-64 overflow-hidden">
                   <img
-                    src={room.image}
+                    src={room.images[0]}
                     alt={room.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
@@ -657,18 +717,18 @@ const Home = () => {
                       {room.title}
                     </h3>
                     <p className="text-primary-600 font-medium">
-                      {room.subtitle}
+                      {room.category}
                     </p>
                   </div>
-                  <p className="text-gray-600 mb-6 leading-relaxed text-sm sm:text-base">
+                  <p className="text-gray-600 mb-6 leading-relaxed text-sm">
                     {room.description}
                   </p>
                   <div className="grid grid-cols-2 gap-2 mb-6">
-                    {room.features.map((feature, idx) => (
+                    {room.amenities.map((feature, idx) => (
                       <div key={idx} className="flex items-center space-x-2">
                         <div className="w-2 h-2 bg-green-600 rounded-full flex-shrink-0" />
                         <span className="text-xs sm:text-sm text-gray-700">
-                          {feature}
+                          {feature.text}
                         </span>
                       </div>
                     ))}

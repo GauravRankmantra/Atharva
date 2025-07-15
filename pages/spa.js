@@ -37,7 +37,7 @@ const Spa = () => {
       title: 'Deep Tissue Restoration',
       category: 'Therapeutic',
       duration: '75 minutes',
-      price: '$999',
+      price: '₹799',
       description: 'Release chronic tension and restore mobility with our intensive deep tissue massage. Our skilled therapists use targeted pressure and specialized techniques to reach deeper layers of muscle and connective tissue, addressing knots, adhesions, and areas of chronic pain. This powerful treatment is perfect for athletes, active individuals, or anyone seeking relief from muscular tension and stress-related discomfort.',
       benefits: ['Muscle Tension Relief', 'Improved Mobility', 'Pain Reduction', 'Better Posture', 'Enhanced Recovery'],
       image: 'https://images.pexels.com/photos/3757958/pexels-photo-3757958.jpeg?w=600&h=400&fit=crop',
