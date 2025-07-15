@@ -31,17 +31,18 @@ import img4 from "../public/images/home/4.jpg";
 import Image from "next/image";
 import { FlipWords } from "../components/ui/flip-words";
 import bg1 from "../public/images/home/bg1.jpg";
-import bg2 from "../public/images/home/bg2.jpg";
+import bg2 from "../public/images/jungle.jpg";
 import bg3 from "../public/images/home/bg3.jpg";
 import bg4 from "../public/images/bg2.jpeg";
 import bg5 from "../public/images/bg3.jpeg";
 import bg6 from "../public/images/bg4.jpeg";
 import backgroundImage from "../public/images/home/sitebg.png";
 import backgroundImage2 from "../public/images/bg2.jpeg";
-import backgroundImage3 from "../public/images/home/sitebg6.webp";
+import backgroundImage3 from "../public/images/jungle.jpg";
 import { ParallaxScroll } from "../components/ui/parallax-scroll";
 import { HeroParallax } from "@/components/ui/hero-parallax";
 import MediaScroller from "@/components/ui/MediaScroller";
+import JungleExperienceGrid from "@/components/JungleExperienceGrid";
 
 const Home = () => {
   const imagesp = [
@@ -771,6 +772,9 @@ const Home = () => {
           </motion.div>
         </div>
       </section>
+      <section>
+        <JungleExperienceGrid/>
+      </section>
 
       {/* Spa Preview Section */}
       <section className="py-16 sm:py-20 lg:py-32 bg-white overflow-hidden">
@@ -878,7 +882,7 @@ const Home = () => {
         style={{
           backgroundImage: `url(${backgroundImage2.src})`,
           backgroundSize: "cover",
-          backgroundPosition: "top",
+          backgroundPosition: "center",
           backgroundAttachment: "fixed",
         }}
         className="py-16 sm:py-20 lg:py-32 overflow-hidden relative"
